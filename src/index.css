@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div, section, form {
+  caret-color: transparent; /* hides text cursor */
+}
+
+input, textarea {
+  caret-color: black; /* or your theme color */
+}
+
+[contenteditable="true"] {
+  caret-color: transparent; /* hide caret */
+}

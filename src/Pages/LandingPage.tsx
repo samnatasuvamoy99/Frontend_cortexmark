@@ -15,7 +15,7 @@ export function LandingPage() {
   const navigate = useNavigate();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Load theme from localStorage when the component mounts
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -26,7 +26,7 @@ export function LandingPage() {
     }
   }, []);
 
-  // Apply or remove dark mode class whenever theme changes
+
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");

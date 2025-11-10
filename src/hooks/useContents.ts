@@ -28,7 +28,7 @@ export function useContent(){
 
            } , 10 * 1000)
 
-           // clean up
+          
            return () =>{
              clearInterval(interval);
            }

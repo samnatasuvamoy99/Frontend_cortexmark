@@ -33,16 +33,15 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
     }
   };
 
-  // Convert YouTube URL to embed format
   const getYouTubeEmbedUrl = (url: string): string => {
     if (!url) return "";
     
-    // If already an embed URL, return as is
+   
     if (url.includes("/embed/")) {
       return url.split("?")[0]; // Remove query parameters
     }
     
-    // Handle youtu.be format
+ 
     if (url.includes("youtu.be/")) {
       const videoId = url.split("youtu.be/")[1]?.split("?")[0];
       if (videoId) {
@@ -50,7 +49,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
       }
     }
     
-    // Handle youtube.com/watch?v= format
+    
     if (url.includes("watch?v=")) {
       const videoId = url.split("watch?v=")[1]?.split("&")[0];
       if (videoId) {
@@ -58,7 +57,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
       }
     }
     
-    // Handle youtube.com/v/ format
+
     if (url.includes("/v/")) {
       const videoId = url.split("/v/")[1]?.split("?")[0];
       if (videoId) {
@@ -66,19 +65,19 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
       }
     }
     
-    // Fallback: try to extract video ID from URL
+
     const match = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
     if (match && match[1]) {
       return `https://www.youtube.com/embed/${match[1]}`;
     }
     
-    return url; // Return original if we can't convert
+    return url; 
   };
 
-  // Normalize Twitter/X URL
+
   const getTwitterUrl = (url: string): string => {
     if (!url) return "";
-    // Replace x.com with twitter.com for Twitter widget compatibility
+   
     return url.replace(/x\.com/g, "twitter.com");
   };
 

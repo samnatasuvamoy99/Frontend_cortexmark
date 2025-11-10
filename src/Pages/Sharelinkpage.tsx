@@ -26,7 +26,7 @@ export function Sharelink() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>("");
 
-  // If hash exists in URL, fetch and display shared content
+
   useEffect(() => {
     if (hash) {
       setLoading(true);
@@ -37,7 +37,7 @@ export function Sharelink() {
           setUsername(response.data.username || "");
           setLoading(false);
           
-          // Reload Twitter widgets after content is loaded
+     
           setTimeout(() => {
             if (window.twttr && window.twttr.widgets) {
               window.twttr.widgets.load();
@@ -65,7 +65,6 @@ export function Sharelink() {
     }
   }
 
-  // If hash exists, show shared content view
   if (hash) {
     return (
       <div className="min-h-screen bg-gray-100 p-4">
@@ -92,7 +91,7 @@ export function Sharelink() {
                 </h2>
               )}
 
-              {/* Cards */}
+           
               <div className="flex mt-2 gap-10 flex-row p-4 flex-wrap justify-center">
                 {sharedContent && sharedContent.length > 0 ? (
                   sharedContent.map((content, index) => (
@@ -120,7 +119,7 @@ export function Sharelink() {
     );
   }
 
-  // Otherwise, show the share URL copy view (when accessed via /sharelink1)
+
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-gradient-to-br from-purple-300 via-purple-200 to-blue-200">
       <motion.div

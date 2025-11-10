@@ -29,7 +29,7 @@ export function CreateContent({ open, onClose }) {
    const [type, Settype] = useState<ContentType>(ContentType.Youtube)
 
 
-   // backend connection 
+
 
    async function addcontent() {
       const title = TitleRef.current?.value;
@@ -51,7 +51,7 @@ export function CreateContent({ open, onClose }) {
             link
 
          }, {
-            // header seating
+          
             headers: {
                "Authorization": localStorage.getItem("token")
             }
@@ -76,7 +76,7 @@ export function CreateContent({ open, onClose }) {
    }
 
    return <div>
-      {/* when user click to create content that type ui */}
+      
       {open && <div className="w-screen h-screen  bg-gray-200 fixed 
               top-0 left-0  flex justify-center">
 

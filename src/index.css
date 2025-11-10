@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 div, section, form {
-  caret-color: transparent; /* hides text cursor */
+  caret-color: transparent; 
 }
 
 input, textarea {
-  caret-color: black; /* or your theme color */
+  caret-color: black; 
 }
 
 [contenteditable="true"] {
-  caret-color: transparent; /* hide caret */
+  caret-color: transparent; 
 }

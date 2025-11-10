@@ -33,6 +33,55 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
     }
   };
 
+  // Convert YouTube URL to embed format
+  const getYouTubeEmbedUrl = (url: string): string => {
+    if (!url) return "";
+    
+    // If already an embed URL, return as is
+    if (url.includes("/embed/")) {
+      return url.split("?")[0]; // Remove query parameters
+    }
+    
+    // Handle youtu.be format
+    if (url.includes("youtu.be/")) {
+      const videoId = url.split("youtu.be/")[1]?.split("?")[0];
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+    }
+    
+    // Handle youtube.com/watch?v= format
+    if (url.includes("watch?v=")) {
+      const videoId = url.split("watch?v=")[1]?.split("&")[0];
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+    }
+    
+    // Handle youtube.com/v/ format
+    if (url.includes("/v/")) {
+      const videoId = url.split("/v/")[1]?.split("?")[0];
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+    }
+    
+    // Fallback: try to extract video ID from URL
+    const match = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
+    if (match && match[1]) {
+      return `https://www.youtube.com/embed/${match[1]}`;
+    }
+    
+    return url; // Return original if we can't convert
+  };
+
+  // Normalize Twitter/X URL
+  const getTwitterUrl = (url: string): string => {
+    if (!url) return "";
+    // Replace x.com with twitter.com for Twitter widget compatibility
+    return url.replace(/x\.com/g, "twitter.com");
+  };
+
   return (
     <div className="p-4 bg-white shadow-xl rounded-md border border-gray-200 hover:border-1 hover:border-blue-600 hover:shadow-2xl w-64 h-96 overflow-hidden flex flex-col">
      
@@ -76,12 +125,14 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
             <Openlogo />
           </a>
 
-          <button
-            className="hover:text-red-500 cursor-pointer"
-            onClick={handleDelete}
-          >
-            <Deletecard />
-          </button>
+          {onDelete && (
+            <button
+              className="hover:text-red-500 cursor-pointer"
+              onClick={handleDelete}
+            >
+              <Deletecard />
+            </button>
+          )}
         </div>
       </div>
 
@@ -90,7 +141,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
         {type === "youtube" && link && (
           <iframe
             className="w-full h-32"
-            src={link.replace("watch", "embed").replace("?v=", "/")}
+            src={getYouTubeEmbedUrl(link)}
             title="YouTube video player"
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -101,7 +152,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
 
         {type === "twitter" && link && (
           <blockquote className="twitter-tweet">
-            <a href={link.replace("x.com", "twitter.com")}></a>
+            <a href={getTwitterUrl(link)}></a>
           </blockquote>
         )}
 

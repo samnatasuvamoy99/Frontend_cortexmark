@@ -32,6 +32,22 @@ export function Dashboard() {
         }
     }, [modelOpen, dispatch]);
 
+    // Reload Twitter widgets after content is loaded
+    useEffect(() => {
+        if (contents.length > 0) {
+            // Wait for Twitter script to load, then reload widgets
+            const reloadTwitterWidgets = () => {
+                if (window.twttr && window.twttr.widgets) {
+                    window.twttr.widgets.load();
+                } else {
+                    // Retry after a short delay if Twitter script isn't loaded yet
+                    setTimeout(reloadTwitterWidgets, 500);
+                }
+            };
+            reloadTwitterWidgets();
+        }
+    }, [contents]);
+
  
     const filteredContents = contents.filter(content => {
         if (activeFilter === 'all') return true;
@@ -88,7 +104,9 @@ export function Dashboard() {
                   }
                 );
 
-                const shareurl = `http://localhost:5173/share/${responce.data.hash}`;
+                // Use production URL or fallback to window location for dynamic URL
+                const frontendUrl = import.meta.env.VITE_FRONTEND_URL || window.location.origin;
+                const shareurl = `${frontendUrl}/share/${responce.data.hash}`;
                 navigate("/sharelink1", { state: { shareurl } });
               } catch (error) {
                 console.error("Error sharing brain:", error);

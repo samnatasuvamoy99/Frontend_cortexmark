@@ -154,7 +154,7 @@ export function LandingPage() {
           variants={floatingVariants}
           animate="animate"
         >
-          <img className="w-24 h-24" src={insta_Logo} alt="Instagram" />
+          <img className="w-24 h-24 " src={insta_Logo} alt="Instagram" />
         </motion.div>
         <motion.div
           className={`absolute top-40 right-32 text-5xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
@@ -177,7 +177,7 @@ export function LandingPage() {
 
 
         <motion.div
-          className={`absolute bottom-20 right-20 text-6xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
+          className={`absolute bottom-5 right-5 text-6xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
             }`}
           variants={floatingVariants}
           animate="animate"
@@ -186,7 +186,7 @@ export function LandingPage() {
           🎵
         </motion.div>
         <motion.div
-          className={`absolute bottom-60 right-1/1 text-4xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
+          className={`absolute bottom-60 right-1/1 text-5xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
             }`}
           variants={floatingVariants}
           animate="animate"
@@ -195,7 +195,7 @@ export function LandingPage() {
           📄
         </motion.div>
         <motion.div
-          className={`absolute bottom-60 right-1/2 text-4xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
+          className={`absolute bottom-24 right-18 z-50 text-5xl transition-opacity duration-500 ${isDarkMode ? 'opacity-20' : 'opacity-10'
             }`}
           variants={floatingVariants}
           animate="animate"
@@ -372,17 +372,18 @@ export function LandingPage() {
             }`}>No need to open these apps anymore - save everything here!</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <motion.div
-              className={`backdrop-blur-sm rounded-2xl p-6 transition-all duration-300 text-center shadow-lg ${isDarkMode
-                  ? 'bg-gradient-to-br from-red-600/20 to-red-700/20 border border-red-500/30 hover:border-red-400/50'
-                  : 'bg-gradient-to-br from-red-100/50 to-red-200/50 border border-red-300/50 hover:border-red-400/70'
+            
+               className={`backdrop-blur-md rounded-2xl p-6 shadow-xl text-center transition-colors duration-500 ${isDarkMode
+                  ? 'bg-gradient-to-br from-indigo-500/30 to-violet-600/40 border border-violet-400/40'
+                  : 'bg-gradient-to-br from-blue-100/50 to-blue-200/50 border border-blue-300/50'
                 }`}
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="text-5xl mb-3">
-                     <img className="w-28 h-24" src={youtube_LOGO} alt="Instagram" />
+              <div className="text-5xl ">
+                     <img className="w-45 h-45" src={youtube_LOGO} alt="Instagram" />
               </div>
-              <p className={`font-bold text-lg transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
+              <p className={`font-semibold text-lg tracking-wide transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>YouTube</p>
               <p className={`text-sm transition-colors duration-500 ${isDarkMode ? 'text-red-300' : 'text-red-600'
                 }`}>Videos</p>
@@ -396,8 +397,8 @@ export function LandingPage() {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="flex justify-center mb-3">
-                <img className="w-16 h-16 drop-shadow-lg" src={Twitter_Logo} alt="Twitter" />
+              <div className=" text-5xl  mb-8">
+                <img className="w-14 h-14 ml-7" src={Twitter_Logo} alt="Twitter" />
               </div>
               <p className={`font-semibold text-lg tracking-wide transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>Twitter</p>
@@ -413,10 +414,10 @@ export function LandingPage() {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="text-5xl mb-3">
-                <img className="w-24  h-24" src={insta_Logo} alt="Instagram" />
+              <div className=" text-5xl mb-3">
+                <img className="w-20  h-20 ml-4" src={insta_Logo} alt="Instagram" />
               </div>
-              <p className={`font-bold text-lg transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
+              <p className={`font-semibold text-lg tracking-wide transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>Instagram</p>
               <p className={`text-sm transition-colors duration-500 ${isDarkMode ? 'text-pink-300' : 'text-pink-600'
                 }`}>Posts/Reels</p>
@@ -429,7 +430,7 @@ export function LandingPage() {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="text-5xl mb-3">🎵</div>
+              <div className="text-5xl mb-11">🎵</div>
               <p className={`font-bold text-lg transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>TikTok</p>
               <p className={`text-sm transition-colors duration-500 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
@@ -443,7 +444,7 @@ export function LandingPage() {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="text-5xl mb-3">📄</div>
+              <div className="text-5xl mb-11">📄</div>
               <p className={`font-bold text-lg transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>Articles</p>
               <p className={`text-sm transition-colors duration-500 ${isDarkMode ? 'text-green-300' : 'text-green-600'
@@ -457,7 +458,7 @@ export function LandingPage() {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="text-5xl mb-3">🔗</div>
+              <div className="text-5xl mb-11">🔗</div>
               <p className={`font-bold text-lg transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>Any Link</p>
               <p className={`text-sm transition-colors duration-500 ${isDarkMode ? 'text-blue-300' : 'text-blue-600'

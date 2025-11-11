@@ -14,6 +14,7 @@ const ContentType = {
    Youtube: "youtube",
    Twitter: "twitter",
    Documents: "documents",
+   Account:"account",
    Others: "others"
 } as const;
 type ContentType = typeof ContentType[keyof typeof ContentType];
@@ -127,9 +128,13 @@ export function CreateContent({ open, onClose }) {
 
                </div>
 
-               <div className=" mt-2">
+               <div className=" mt-2 flex gap-2">
                   <Button styleType={type == ContentType.Others ? "primarystyle" : "secondarystyle"} text="Others" variant={type == ContentType.Others ? "primary" : "secondary"} onClick={() => {
                      Settype(ContentType.Others)
+                  }}></Button>
+
+                   <Button styleType={type == ContentType.Account ? "primarystyle" : "secondarystyle"} text="Account" variant={type == ContentType.Account ? "primary" : "secondary"} onClick={() => {
+                     Settype(ContentType.Account)
                   }}></Button>
                </div>
 

@@ -566,7 +566,35 @@ export function LandingPage() {
             Sign In
           </motion.button>
         </motion.div>
+      
+      {/* Download Chrome Extension Section */}
+<section className="py-16 bg-gray-50 dark:bg-gray-800 text-center">
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="max-w-2xl mx-auto px-4"
+  >
+    <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+      Get the  CortexMark Chrome Extension
+    </h2>
+    <p className="text-gray-600 dark:text-gray-400 mb-8">
+      Boost your productivity with the Cortex Chrome Extension.  
+      Download it instantly and start using it right away!
+    </p>
 
+    <motion.a
+      href="https://drive.google.com/uc?export=download&id=1kWnfGz8xd0dvqPZd-F6VbaUx8Fk1OWSs"
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 150, 255, 0.6)" }}
+      whileTap={{ scale: 0.95 }}
+      className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+    >
+      Download CortexMark Extension
+    </motion.a>
+  </motion.div>
+</section>
 
         <motion.div
           className="text-center"
@@ -576,6 +604,21 @@ export function LandingPage() {
             }`}>
             Join thousands of users who stopped wasting time on social media
           </p>
+            
+         
+    <motion.div
+      initial={{ opacity: 0, y: 30, scale: 0.8 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      whileHover={{ scale: 1.1, color: "#38bdf8" }}
+      className="text-white text-center font-semibold tracking-wide text-lg md:text-xl mt-10 select-none"
+      style={{ fontFamily: "'Poppins', sans-serif" }}
+    >
+      Made by <span className="text-blue-400 font-bold">Suvamoy</span>
+    </motion.div>
+  
+
+
           <div className={`flex justify-center items-center gap-8 text-sm transition-colors duration-500 ${isDarkMode ? 'text-slate-400' : 'text-blue-600'
             }`}>
             <motion.span

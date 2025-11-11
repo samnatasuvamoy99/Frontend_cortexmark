@@ -5,6 +5,7 @@ import { YoutubeIcon } from "../icons/Youtube";
 import { LinkIcon } from "../icons/Link";
 import { DocumentIcon } from "../icons/Document";
 import { TagIcon } from "../icons/Tag";
+import {AllAccount} from "../icons/Allaccount"
 import { Logo } from "../icons/Logo"
 import { useNavigate } from "react-router-dom";
 
@@ -30,6 +31,7 @@ export function Sidebar() {
           <SiderbarItem text="All Content" icon={<TagIcon />} filterType="all" />
           <SiderbarItem text="Twitter" icon={<TwitterIcon />} filterType="twitter" />
           <SiderbarItem text="Videos" icon={<YoutubeIcon />} filterType="youtube" />
+          <SiderbarItem text="My Accounts" icon={<AllAccount />} filterType="account" />
           <SiderbarItem text="Documents" icon={<DocumentIcon />} filterType="documents" />
           <SiderbarItem text="Others" icon={<LinkIcon />} filterType="others" />
         </div>

@@ -13,7 +13,7 @@ export function Navbar(){
        <div className="w-full bg-white border-b border-gray-200 px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Logo />
-            <span className="text-xl font-semibold text-purple-600">Second Brain</span>
+            <span className="text-xl font-semibold text-purple-600">CortexMark</span>
           </div>
           
           <div className="flex items-center gap-4">

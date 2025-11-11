@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 export function Dashboard() {
     const [modelOpen, SetmodelOpen] = useState(false);
+     
     const dispatch = useAppDispatch();
     const { items: contents, loading } = useAppSelector(state => state.content);
     const activeFilter = useAppSelector(state => state.filter.activeFilter);
@@ -69,7 +70,7 @@ export function Dashboard() {
       />
 
       <div className="flex justify-between items-center mt-3 p-4">
-        {/* Header */}
+        
         <div className="flex items-center gap-4">
           <h2 className="text-2xl font-semibold text-gray-800">
             {activeFilter === "all"
@@ -82,9 +83,10 @@ export function Dashboard() {
           </span>
         </div>
 
-        {/* Buttons */}
+        
         <div className="flex gap-3">
           <Button
+          
             variant="primary"
             styleType="primarystyle"
             text="Add Content"
@@ -117,11 +119,11 @@ export function Dashboard() {
             styleType="secondarystyle"
             text="Share Brain"
             startIcon={<ShareIcon />}
+            
           />
         </div>
       </div>
 
-      {/* Cards */}
       <div className="flex mt-2 gap-10 flex-row p-4 flex-wrap">
         {loading ? (
           <div className="w-full text-center text-gray-500 mt-8">

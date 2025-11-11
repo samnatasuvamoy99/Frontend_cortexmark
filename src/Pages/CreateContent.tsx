@@ -83,14 +83,14 @@ export function CreateContent({ open, onClose }) {
 
          <div className="flex flex-col justify-center">
 
-            <div className="bg-white  p-20 opacity-100 border-2 shadow-xl rounded-lg ">
+            <div className="bg-white  p-20  border-2 shadow-xl rounded-lg ">
 
                <div className="flex gap-2 text-xl text-purple-500 md-10 pr-6 justify-center items-center  ">
                   <Logo />
                   <b className="shadow rounded text-blue-500 ">CortexMark</b>
                </div>
 
-               <div className="flex justify-end cursor-pointer" onClick={onClose}>
+               <div className="flex justify-end cursor-pointer pb-3" onClick={onClose}>
                   <div className="rounded-md" >
 
                      <CrossIcon />
@@ -106,7 +106,7 @@ export function CreateContent({ open, onClose }) {
                   <div >
                      <Input reference={LinkRef} placeholder={"Link"} type="Link" />
                   </div>
-                  <b className="shadow border-1  text-purple-600 rounded-md  border-gray-400 "> Select your type</b>
+                  <b className="shadow border-1  text-purple-600 rounded border-gray-400 "> Select your type</b>
 
                   <div className="flex gap-2 mt-5 mr-4">
 

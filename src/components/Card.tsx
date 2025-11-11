@@ -1,5 +1,5 @@
 
-import { ShareIcon } from "../icons/Shareicon";
+import {Cardicon} from "../icons/Card_share";
 import { Openlogo } from "../icons/Open_Link";
 import { Deletecard } from "../icons/deletecard";
 import { useAppDispatch } from "../Store/hooks";
@@ -88,7 +88,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
 
         <div className="flex items-start">
           <div className="text-gray-500 pt-1 pr-3">
-            <ShareIcon />
+            <Cardicon/>
           </div>
 
 

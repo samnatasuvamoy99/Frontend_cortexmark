@@ -126,7 +126,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
 
           {onDelete && (
             <button
-              className="hover:text-red-500 cursor-pointer"
+              className="hover:text-red-500 cursor-pointer pb-1"
               onClick={handleDelete}
             >
               <Deletecard />

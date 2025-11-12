@@ -585,7 +585,7 @@ export function LandingPage() {
     </p>
 
     <motion.a
-      href="https://drive.google.com/uc?export=download&id=1kWnfGz8xd0dvqPZd-F6VbaUx8Fk1OWSs"
+      href="https://drive.google.com/file/d/1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 150, 255, 0.6)" }}

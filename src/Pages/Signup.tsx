@@ -40,7 +40,7 @@ export function Signup() {
       alert("You have signed up successfully!");
 
      
-      navigate("/signin"); 
+      navigate("/dashboard"); 
     } catch (err: any) {
       console.error("Signup error:", err);
       alert(err.response?.data?.message || "Signup failed. Please try again.");

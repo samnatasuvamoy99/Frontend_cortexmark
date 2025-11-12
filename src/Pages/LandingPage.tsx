@@ -584,16 +584,28 @@ export function LandingPage() {
       Download it instantly and start using it right away!
     </p>
 
-    <motion.a
-      href="https://drive.google.com/file/d/1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL/view?usp=sharing"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 150, 255, 0.6)" }}
-      whileTap={{ scale: 0.95 }}
-      className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-    >
-      Download CortexMark Extension
-    </motion.a>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  className="flex flex-col items-center justify-center mt-10"
+>
+  <motion.a
+    href="https://drive.google.com/uc?export=download&id=1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0 0 20px rgba(0, 150, 255, 0.6)",
+    }}
+    whileTap={{ scale: 0.95 }}
+    className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+  >
+    Download CortexMark Extension
+  </motion.a>
+</motion.div>
+
+
   </motion.div>
 </section>
 

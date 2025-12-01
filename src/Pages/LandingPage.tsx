@@ -501,7 +501,7 @@ export function LandingPage() {
               <h4 className={`text-xl font-semibold mb-3 transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-blue-900'
                 }`}>Paste & Describe</h4>
               <p className={`transition-colors duration-500 ${isDarkMode ? 'text-slate-300' : 'text-blue-800'
-                }`}>Paste link in Second Brain and add your caption</p>
+                }`}>Paste link in CortexMark and add your caption</p>
               <div className={`mt-4 font-semibold transition-colors duration-500 ${isDarkMode ? 'text-purple-400' : 'text-blue-600'
                 }`}>✍️ Add Notes</div>
             </motion.div>

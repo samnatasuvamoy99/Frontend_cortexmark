@@ -8,6 +8,7 @@ import youtube_LOGO from "../assets/youtube.png";
 import Facebook_logo from "../assets/FAcebook_logo.jpg"
 import Article from "../assets/Articale.jpg"
 import url from "../assets/url_logo.jpg"
+import { FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
 
 interface Platform {
   name: string;
@@ -566,7 +567,41 @@ export function LandingPage() {
               CortexMark
             </div>
             <div className="lp-fsep" />
-            <div className="lp-fnote">Made with  by Suvamoy</div>
+            {/* <div className="lp-fnote">Made with  by Suvamoy</div> */}
+
+            <div className="lp-fnote flex items-center gap-3">
+      <span>Made with by Suvamoy</span>
+
+      <a
+        href="https://www.linkedin.com/in/suvamoy-samanta-16b415288"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="text-blue-600 hover:scale-110 transition"
+      >
+        <FaLinkedin size={18} />
+      </a>
+
+      <a
+        href="https://x.com/SamantaSuvamoy"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        className="hover:scale-110 transition"
+      >
+        <FaXTwitter size={18} />
+      </a>
+
+      <a
+        href="https://github.com/samnatasuvamoy99"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        className="text-white hover:scale-110 transition"
+      >
+        <FaGithub size={18} />
+      </a>
+    </div>
           </div>
           <div className="lp-fbadges">
             {["Free forever", "No ads", "Privacy first", "Open source"].map(b => (

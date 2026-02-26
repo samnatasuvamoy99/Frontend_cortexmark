@@ -334,7 +334,7 @@ export function LandingPage() {
 
             {/* left */}
             <div>
-                <div className="lp-eyebrow"><span className="lp-edot"/>Chrome Extension Now Live</div>
+                <div className="lp-eyebrow"><span className="lp-edot"/>Chrome(1.0.0) Extension Now Live</div>
               <h1 className="lp-h1">
                 Bookmark<br/>
                 <span className="lp-grad">Everything.</span><br/>

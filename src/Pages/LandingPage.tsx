@@ -488,7 +488,7 @@ export function LandingPage() {
                 </div>
 
 
-                ── Uncomment when assets are imported ──
+                
                 <div className="lp-social-row w-15 h-15">
                   <img src={insta_Logo} alt="Instagram" className="lp-slogo " />
                   <img src={Twitter_Logo} alt="Twitter" className="lp-slogo" />

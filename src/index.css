@@ -13,3 +13,8 @@ input, textarea {
 [contenteditable="true"] {
   caret-color: transparent; 
 }
+
+.ppill-logo {
+  width: 26px;
+  height: 26px;
+}

@@ -21,6 +21,11 @@ export default {
                600:"#5046e4",
                700:"#7164c0"
            }
+           ,
+     fontFamily: {
+      orbitron: ['Orbitron', 'sans-serif'],
+      sans: ['Inter', 'sans-serif'], 
+    },
         }
     },
   },

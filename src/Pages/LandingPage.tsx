@@ -561,8 +561,8 @@ export function LandingPage() {
         <footer className="lp-footer">
           <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
             <div className="lp-fbrand">
-              {/* <Logo /> */}
-              <div className="lp-bmark" style={{ width: 24, height: 24, fontSize: 11, borderRadius: 7 }}>🔖</div>
+              
+              <div className="lp-bmark" style={{ width: 24, height: 24, fontSize: 11, borderRadius: 7 }}>  <Logo/></div>
               CortexMark
             </div>
             <div className="lp-fsep" />

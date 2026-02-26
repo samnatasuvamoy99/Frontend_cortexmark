@@ -593,7 +593,7 @@ export function LandingPage() {
       </a>
 
       <a
-        href="https://github.com/samnatasuvamoy99"
+        href="https://github.com/samnatasuvamoy99/Cortex_Mark"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"

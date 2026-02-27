@@ -19,9 +19,7 @@ interface Platform {
 const DOWNLOAD_URL =
   "https://drive.usercontent.google.com/download?id=1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL&export=download&authuser=0";
 
-  const DOWNLOAD_URL2 ="https://github.com/samnatasuvamoy99/Cortex_Mark/tree/main/Chrome_Extension_CortexMark#readme";
-
-  "https://drive.usercontent.google.com/download?id=1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL&export=download&authuser=0";
+  const DOWNLOAD_URL2 ="https://drive.usercontent.google.com/download?id=1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL&export=download&authuser=0";
 
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap');

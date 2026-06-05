@@ -9,6 +9,8 @@ import { CreateContent } from "./Pages/CreateContent";
 import { Dashboard } from "./Pages/Allcontents";
 import { LandingPage } from "./Pages/LandingPage";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { ForgotPassword } from "./Pages/ForgotPassword";
+import { ResetPassword } from "./Pages/ResetPassword";
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route
           path="/createcontent"
           element={
@@ -46,7 +50,14 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/share/:hash" element={<Sharelink />} />
       </Routes>
     </BrowserRouter>

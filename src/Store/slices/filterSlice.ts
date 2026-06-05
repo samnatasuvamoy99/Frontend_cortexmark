@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
-export type FilterType = 'all' | 'twitter' | 'youtube' | 'documents' | 'account'| 'others';
+export type FilterType = 'all' | 'twitter' | 'youtube' | 'documents' | 'account'| 'others' | 'history';
 
 interface FilterState {
   activeFilter: FilterType;

@@ -8,6 +8,7 @@ import { TagIcon } from "../icons/Tag";
 import {AllAccount} from "../icons/Allaccount"
 import { Logo } from "../icons/Logo"
 import { useNavigate } from "react-router-dom";
+import { HistoryIcon } from "../icons/History";
 
 export function Sidebar() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export function Sidebar() {
     <div className="fixed top-0 left-0 h-screen w-64 bg-white border-r border-gray-300 flex flex-col justify-between z-50">
       {/* Header */}
       <div>
-        <div className="flex gap-2 text-xl pt-6 items-center pl-6">
+        <div className="flex gap-2 text-xl pt-6 text-purple-600 items-center pl-6">
           <Logo />
           <b className="text-purple-600 text-2xl">CortexMark</b>
         </div>
@@ -34,6 +35,7 @@ export function Sidebar() {
           <SiderbarItem text="My Accounts" icon={<AllAccount />} filterType="account" />
           <SiderbarItem text="Documents" icon={<DocumentIcon />} filterType="documents" />
           <SiderbarItem text="Others" icon={<LinkIcon />} filterType="others" />
+          <SiderbarItem text="History" icon={<HistoryIcon />} filterType="history" />
         </div>
       </div>
 

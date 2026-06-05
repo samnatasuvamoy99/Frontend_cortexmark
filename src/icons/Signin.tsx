@@ -6,7 +6,7 @@ export function Signinlogo() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}      
       stroke="currentColor"
-      className="size-4 mb-1 hover:size-5 hover:flex hover:justify-end"
+      className="size-5 hover:size-5 hover:flex hover:justify-end"
     >
       <path
         strokeLinecap="round"   

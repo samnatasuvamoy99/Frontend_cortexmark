@@ -12,7 +12,7 @@ interface SharedContent {
   _id: string;
   title: string;
   link: string;
-  type: "twitter" | "youtube" | "documents" | "others";
+  type: "twitter" | "youtube" | "documents" | "account" | "others";
 }
 
 export function Sharelink() {

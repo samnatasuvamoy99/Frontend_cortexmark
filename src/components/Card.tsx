@@ -13,9 +13,10 @@ interface Cardprops {
   type: "twitter" | "youtube" | "documents" | "account" | "others";
   _id?: string;
   onDelete?: () => void;
+  createdAt?: string;
 }
 
-export function Card({ title, link, type, _id, onDelete }: Cardprops) {
+export function Card({ title, link, type, _id, onDelete, createdAt }: Cardprops) {
   const [showFull, setShowFull] = useState(false);
   const dispatch = useAppDispatch();
 
@@ -128,6 +129,7 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
             <button
               className="hover:text-red-500 cursor-pointer pb-1"
               onClick={handleDelete}
+              title="Delete"
             >
               <Deletecard />
             </button>
@@ -231,6 +233,22 @@ export function Card({ title, link, type, _id, onDelete }: Cardprops) {
     </a>
   </motion.div>
 )}
+      </div>
+
+      {/* Card Footer */}
+      <div className="mt-auto pt-2 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+        <span className="capitalize px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full font-medium border border-purple-100">
+          {type}
+        </span>
+        {createdAt && (
+          <span className="text-gray-400">
+            {new Date(createdAt).toLocaleDateString(undefined, {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </span>
+        )}
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ interface Platform {
 
 
 const DOWNLOAD_URL =
-  "https://drive.usercontent.google.com/download?id=1Ak_12-JNL4aMvh7vl0sDUCGQNwOwbUxL&export=download&authuser=0";
+  "https://drive.usercontent.google.com/download?id=15A7GCAYLjsFKDFeYDNA0XEc50wBUnd8d&export=download"
 
   const DOWNLOAD_URL2 ="https://github.com/samnatasuvamoy99/Cortex_Mark/blob/main/Chrome_Extension_CortexMark/README.md";
 
